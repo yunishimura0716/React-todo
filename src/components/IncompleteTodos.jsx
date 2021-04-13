@@ -9,7 +9,9 @@ export const IncompleteTodos = (props) => {
         {incompleteTodos.map((todo, idx) => {
           return (
             <div key={todo} className="list-row">
-              <li>{todo}</li>
+              <li>
+                {idx + 1}: {todo}
+              </li>
               <button onClick={() => onClickComplete(idx)}>Complete</button>
               <button onClick={() => onClickDelete(idx)}>Delete</button>
             </div>
